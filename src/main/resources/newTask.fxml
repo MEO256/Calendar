@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="cs3500.pa05.controller.TaskCollector">
+    <AnchorPane prefHeight="250.0" prefWidth="350.0">
+        <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="145.0" prefWidth="113.0" spacing="20.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Text>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Day Of The Week:">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Text>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Text>
+                </children>
+            </VBox>
+            <Button fx:id="addTaskButton" layoutX="245.0" layoutY="204.0" mnemonicParsing="false"
+                    onAction="#onButtonDown" prefHeight="30.0" prefWidth="82.0" text="Add"/>
+            <Pane layoutY="11.0" prefHeight="152.0" prefWidth="284.0">
+                <children>
+                    <TextField fx:id="taskName" layoutX="60.0" layoutY="2.0"/>
+                    <TextField fx:id="taskDay" layoutX="134.0" layoutY="39.0"/>
+                    <TextField fx:id="taskTime" layoutX="87.0" layoutY="82.0"/>
+                </children>
+            </Pane>
+        </children>
+    </AnchorPane>
+</Scene>

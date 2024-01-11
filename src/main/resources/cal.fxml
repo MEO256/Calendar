@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="cs3500.pa05.controller.HandleBarNewScreensDisplay">
+    <AnchorPane prefHeight="939.0" prefWidth="948.0">
+        <children>
+            <Text layoutX="365.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Journal">
+                <font>
+                    <Font name="System Bold Italic" size="32.0"/>
+                </font>
+            </Text>
+            <MenuBar prefHeight="25.0" prefWidth="947.0">
+                <menus>
+                    <Menu fx:id="newEvent" mnemonicParsing="false" text="New Event">
+                        <items>
+                            <MenuItem fx:id="newEventItem" mnemonicParsing="false" onAction="#handleNewEventClick"
+                                      text="Create"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="New Task">
+                        <items>
+                            <MenuItem fx:id="newTaskItem" mnemonicParsing="false" onAction="#handleNewTaskClick"
+                                      text="Create"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Save">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="About"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Open">
+                        <items>
+                            <MenuItem fx:id="testTask" mnemonicParsing="false" text="Action 1"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="New Week">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="New Quote">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#hangleCreateQuote" text="Create"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Delete Quote">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleDeleteQuote" text="Delete"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Delete Event">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleDeleteEvent" text="Delete"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Delete Task">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleDeleteTask" text="Delete"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <VBox layoutX="576.0" layoutY="366.0" prefHeight="268.0" prefWidth="308.0" spacing="5.0">
+                <children>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="34.0" stroke="BLACK"
+                               strokeType="INSIDE" width="308.0"/>
+                </children>
+            </VBox>
+            <Text layoutX="689.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Tasks">
+                <font>
+                    <Font name="System Bold" size="21.0"/>
+                </font>
+            </Text>
+            <Text layoutX="564.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+            <HBox layoutX="70.0" layoutY="163.0" prefHeight="115.0" prefWidth="812.0">
+                <children>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="120.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                </children>
+            </HBox>
+            <HBox layoutX="70.0" layoutY="124.0" prefHeight="48.0" prefWidth="550.0">
+                <children>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="43.0" stroke="BLACK"
+                               strokeType="INSIDE" width="116.0"/>
+                </children>
+            </HBox>
+            <Pane layoutX="68.0" layoutY="121.0" prefHeight="44.0" prefWidth="815.0">
+                <children>
+                    <Text layoutX="34.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday"
+                          wrappingWidth="59.72308349609375">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="145.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday"
+                          wrappingWidth="59.72308349609375">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="254.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday"
+                          wrappingWidth="81.48556518554688">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="373.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thursday"
+                          wrappingWidth="65.76821899414062">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="503.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday"
+                          wrappingWidth="59.72308349609375">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="612.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday"
+                          wrappingWidth="59.72308349609375">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                    <Text layoutX="729.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunday"
+                          wrappingWidth="59.72308349609375">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Text>
+                </children>
+            </Pane>
+            <Line endX="709.5155639648438" endY="-0.5" layoutX="170.0" layoutY="209.0" startX="-101.00001525878906"
+                  startY="-0.5"/>
+            <Pane layoutX="69.0" layoutY="166.0" prefHeight="118.0" prefWidth="814.0">
+                <children>
+                    <HBox layoutX="5.0" layoutY="2.0" prefHeight="43.0" prefWidth="809.0" spacing="20.0">
+                        <children>
+                            <VBox fx:id="MondayEvent" prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1MONDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="85.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2MONDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="89.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1TUESDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="94.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2TUESDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="94.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1WEDNESDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="90.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2WEDNESDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="88.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1THURSDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="91.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2THURSDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="90.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1FRIDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="93.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2FRIDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="90.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1SATURDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="95.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2SATURDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="91.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                            <VBox prefHeight="40.0" prefWidth="96.0">
+                                <children>
+                                    <Text fx:id="event1SUNDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event1"
+                                          wrappingWidth="101.3203125">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                    <Text fx:id="event2SUNDAY" strokeType="OUTSIDE" strokeWidth="0.0" text="event2"
+                                          wrappingWidth="103.73837280273438">
+                                        <font>
+                                            <Font name="System Bold" size="12.0"/>
+                                        </font>
+                                    </Text>
+                                </children>
+                            </VBox>
+                        </children>
+                    </HBox>
+                </children>
+            </Pane>
+            <HBox layoutX="70.0" layoutY="210.0" prefHeight="71.0" prefWidth="813.0"/>
+            <Pane layoutX="68.0" layoutY="216.0" prefHeight="68.0" prefWidth="816.0">
+                <children>
+                    <HBox layoutX="7.0" layoutY="1.0" prefHeight="76.0" prefWidth="812.0">
+                        <children>
+                            <HBox prefHeight="87.0" prefWidth="804.0" spacing="20.0">
+                                <children>
+                                    <VBox fx:id="MondayTask" prefHeight="123.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1MONDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="91.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2MONDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="86.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="121.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1TUESDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="90.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2TUESDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="89.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="40.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1WEDNESDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="90.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2WEDNESDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="80.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="128.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1THURSDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="90.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2THURSDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="86.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="40.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1FRIDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="90.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2FRIDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="86.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="71.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1SATURDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="85.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2SATURDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="85.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="40.0" prefWidth="96.0">
+                                        <children>
+                                            <Text fx:id="task1SUNDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task1" wrappingWidth="87.017578125">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                            <Text fx:id="task2SUNDAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                  text="task2" wrappingWidth="84.73837280273438">
+                                                <font>
+                                                    <Font name="System Bold" size="12.0"/>
+                                                </font>
+                                            </Text>
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </HBox>
+                        </children>
+                    </HBox>
+                </children>
+            </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="589.0" layoutX="576.0" layoutY="319.0"
+                       stroke="BLACK" strokeType="INSIDE" width="308.0"/>
+            <VBox layoutX="72.0" layoutY="363.0" prefHeight="268.0" prefWidth="308.0" spacing="5.0">
+                <children>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                </children>
+            </VBox>
+            <Text layoutX="206.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quotes">
+                <font>
+                    <Font name="System Bold" size="21.0"/>
+                </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="320.0" layoutX="71.0" layoutY="316.0"
+                       stroke="BLACK" strokeType="INSIDE" width="355.0"/>
+            <Text layoutX="87.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+                  wrappingWidth="45.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text layoutX="86.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+                  wrappingWidth="45.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text layoutX="86.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+                  wrappingWidth="45.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text layoutX="84.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+                  wrappingWidth="45.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task1" layoutX="700.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task2" layoutX="700.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task3" layoutX="700.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task4" layoutX="700.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task5" layoutX="700.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task6" layoutX="700.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task7" layoutX="700.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task8" layoutX="700.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task9" layoutX="700.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task10" layoutX="700.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task11" layoutX="700.0" layoutY="781.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task12" layoutX="700.0" layoutY="818.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task13" layoutX="700.0" layoutY="858.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <Text fx:id="task14" layoutX="700.0" layoutY="899.0" strokeType="OUTSIDE" strokeWidth="0.0" text="task2"
+                  wrappingWidth="39.529327392578125">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Text>
+            <VBox layoutX="61.0" layoutY="697.0" prefHeight="200.0" prefWidth="360.0"/>
+            <VBox layoutX="74.0" layoutY="719.0" prefHeight="268.0" prefWidth="308.0" spacing="5.0">
+                <children>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="64.0" stroke="BLACK"
+                               strokeType="INSIDE" width="353.0"/>
+                </children>
+            </VBox>
+            <Text layoutX="170.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Week Overview">
+                <font>
+                    <Font name="System Bold" size="21.0"/>
+                </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="251.0" layoutX="73.0" layoutY="672.0"
+                       stroke="BLACK" strokeType="INSIDE" width="355.0"/>
+            <Text layoutX="84.0" layoutY="756.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Events:"
+                  wrappingWidth="115.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text layoutX="84.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Tasks:"
+                  wrappingWidth="115.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text layoutX="84.0" layoutY="895.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks Completed:"
+                  wrappingWidth="161.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text fx:id="totalEvents" layoutX="284.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2"
+                  wrappingWidth="115.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text fx:id="totalTasks" layoutX="284.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2"
+                  wrappingWidth="115.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+            <Text fx:id="tasksCompleted" layoutX="260.0" layoutY="896.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="0%" wrappingWidth="161.10821533203125">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Text>
+        </children>
+    </AnchorPane>
+</Scene>

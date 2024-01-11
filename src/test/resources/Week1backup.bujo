@@ -1,0 +1,16 @@
+{
+"max-events":3,
+"max-tasks":3,
+"week":{"week-view"
+:[{"day":"SUNDAY",
+"events":[{
+"name":"Movies",
+"days":"SUNDAY",
+"start-time":"4:00pm",
+"duration":2,
+"path-to-send":"file:///C:/Personal/College/Summer%201%202023/Object%20Oreinted%20Design/CS%203500%20Projects/pa05-fandorins/src/main/resources/Week.bujo"}],
+"tasks":[{
+"name":"Drive",
+"days":"SUNDAY",
+"complete":false,
+"path-to-send":"file:///C:/Personal/College/Summer%201%202023/Object%20Oreinted%20Design/CS%203500%20Projects/pa05-fandorins/src/main/resources/Week.bujo"}]}]}}
